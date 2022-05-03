@@ -1,0 +1,24 @@
+
+hr{
+    height: 1px;
+    background-color: red;
+    border: 1px solid red ;
+}
+
+input[type = button]{
+    background-color: rgb(1, 1, 85);
+    color: white;
+    margin: auto 10px;
+}
+
+body{
+    background-color: #E6E6FB;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+td{
+    padding: 5px;
+}

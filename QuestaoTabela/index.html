@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="comando.js"></script>
+    <title>Sistema da Lanchonete</title>
+    <script>
+    
+function valor1() {
+    var qtd1 = parseFloat(document.getElementById("qtd1").value)
+    var preço1 = parseFloat(document.getElementById("preço1").value)
+    var result1 = qtd1 * preço1;
+    if (isNaN(result1)) {
+        document.getElementById("resultado1").value = "";
+    } else {
+        document.getElementById("resultado1").value = "" + result1;
+    }
+    
+}
+
+function valor2() {
+    var qtd2 = parseFloat(document.getElementById("qtd2").value)
+    var preço2 = parseFloat(document.getElementById("preço2").value)
+    var result2 = qtd2 * preço2;
+    if (isNaN(result2)) {
+        document.getElementById("resultado2").value = "";
+    } else {
+        document.getElementById("resultado2").value = "" + result2;
+    }
+}
+
+function valor3() {
+    var qtd3 = parseFloat(document.getElementById("qtd3").value)
+    var preço3 = parseFloat(document.getElementById("preço3").value)
+    var result3 = qtd3 * preço3;
+    if (isNaN(result3)) {
+        document.getElementById("resultado3").value = "";
+    } else {
+        document.getElementById("resultado3").value = "" + result3;
+    }
+}
+
+function valor4() {
+    var qtd4 = parseFloat(document.getElementById("qtd4").value)
+    var preço4 = parseFloat(document.getElementById("preço4").value)
+    var result4 = qtd4 * preço4;
+    if (isNaN(result4)) {
+        document.getElementById("resultado4").value = "";
+    } else {
+        document.getElementById("resultado4").value = "" + result4;
+    }
+}
+
+function valor5() {
+    var qtd5 = parseFloat(document.getElementById("qtd5").value)
+    var preço5 = parseFloat(document.getElementById("preço5").value)
+    var result5 = qtd5 * preço5;
+    if (isNaN(result5)) {
+        document.getElementById("resultado5").value = "";
+    } else {
+        document.getElementById("resultado5").value = "" + result5;
+    }
+}
+
+function calcTotal() {
+    var result1 =parseFloat(document.getElementById("resultado1").value);
+    var result2 =parseFloat(document.getElementById("resultado2").value);
+    var result3 =parseFloat(document.getElementById("resultado3").value);
+    var result4 =parseFloat(document.getElementById("resultado4").value);
+    var result5 =parseFloat(document.getElementById("resultado5").value);
+    var total = 0;
+    if(!isNaN(result1)){
+        total += result1;
+    }
+    if(!isNaN(result2)){
+        total += result2;
+    }
+    if(!isNaN(result3)){
+        total += result3;
+    }
+    if(!isNaN(result4)){
+        total += result4;
+    }
+    if(!isNaN(result5)){
+        total += result5;
+    }
+   document.getElementById("total").innerHTML = "TOTAL= R$ " + total ;
+}
+ 
+function limpar() {
+    location.reload();
+}
+    </script>
+</head>
+
+
+<body>
+    <h3><b> Comanda do Cliente:</b></h3>
+    <div>
+        <table border="1">
+            <tr border="1">
+                <th>#</th>
+                <th>Descriçao</th>
+                <th>Qtd</th>
+                <th>Preço</th>
+                <th>Subtotal</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>
+                    <form action="">
+                        <select name="comida">
+                            <option value=""></option>
+                            <option value="x-tudo">x-tudo</option>
+                            <option value="hamburguer">hamburguer</option>
+                            <option value="x-calabresa">x-calabresa</option>
+                            <option value="misto">misto</option>
+                            <option value="x-bacon">x-bacon</option>
+                            <option value="pizza">pizza</option>
+                        </select>
+                    </form>
+                </td>
+
+                <form action="">
+                    <td>
+                        <div><input onblur="valor1()" type="text"  id="qtd1" size="5" value="" ></div>
+                    </td>
+
+                    <td>
+                        <div><input onblur="valor1()" type="text" id="preço1" value=""></div>
+                    </td>
+
+                    <td>
+                        <div><input type="text" id="resultado1" readonly></div>
+                    </td>
+                </form>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>
+                    <form action="">
+                        <select name="comida">
+                            <option value=""></option>
+                            <option value="x-tudo">x-tudo</option>
+                            <option value="hamburguer">hamburguer</option>
+                            <option value="x-calabresa">x-calabresa</option>
+                            <option value="misto">misto</option>
+                            <option value="x-bacon">x-bacon</option>
+                            <option value="pizza">pizza</option>
+                        </select>
+                    </form>
+                </td>
+
+                <form action="">
+                    <td>
+                        <!-- onblur basicamente executa as function direto na caixa de texto -->
+                        <div><input onblur="valor2()" type="text" size="5" id="qtd2" value=""></div>
+                    </td>
+
+                    <td>
+                        <div><input onblur="valor2()" type="text" id="preço2" value=""></div>
+                    </td>
+
+                    <td>
+                        <div><input type="text" id="resultado2" readonly></div>
+                    </td>
+                </form>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>
+                    <form action="">
+                        <select name="comida">
+                            <option value=""></option>
+                            <option value="x-tudo">x-tudo</option>
+                            <option value="hamburguer">hamburguer</option>
+                            <option value="x-calabresa">x-calabresa</option>
+                            <option value="misto">misto</option>
+                            <option value="x-bacon">x-bacon</option>
+                            <option value="pizza">pizza</option>
+                        </select>
+                    </form>
+                </td>
+
+                <form action="">
+                    <td>
+                        <div><input onblur="valor3()" type="text" size="5" id="qtd3" value=""></div>
+                    </td>
+
+                    <td>
+                        <div><input onblur="valor3()" type="text" id="preço3" value=""></div>
+                    </td>
+
+                    <td>
+                        <div><input type="text" id="resultado3" readonly></div>
+                    </td>
+                </form>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>
+                    <form action="">
+                        <select name="comida">
+                            <option value=""></option>
+                            <option value="x-tudo">x-tudo</option>
+                            <option value="hamburguer">hamburguer</option>
+                            <option value="x-calabresa">x-calabresa</option>
+                            <option value="misto">misto</option>
+                            <option value="x-bacon">x-bacon</option>
+                            <option value="pizza">pizza</option>
+                        </select>
+                    </form>
+                </td>
+
+                <form action="">
+                    <td>
+                        <div><input onblur="valor4()" type="text" size="5" id="qtd4" value=""></div>
+                    </td>
+
+                    <td>
+                        <div><input onblur="valor4()" type="text" id="preço4" value=""></div>
+                    </td>
+
+                    <td>
+                        <div><input type="text" id="resultado4" readonly></div>
+                    </td>
+                </form>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>
+                    <form action="">
+                        <select name="comida">
+                            <option value=""></option>
+                            <option value="x-tudo">x-tudo</option>
+                            <option value="hamburguer">hamburguer</option>
+                            <option value="x-calabresa">x-calabresa</option>
+                            <option value="misto">misto</option>
+                            <option value="x-bacon">x-bacon</option>
+                            <option value="pizza">pizza</option>
+                        </select>
+                    </form>
+                </td>
+
+                <form action="">
+                    <td>
+                        <div><input onblur="valor5()" type="text" size="5" id="qtd5" value=""></div>
+                    </td>
+
+                    <td>
+                        <div><input onblur="valor5()" type="text" id="preço5" value=""></div>
+                    </td>
+
+                    <td>
+                        <div><input type="text" id="resultado5" readonly></div>
+                    </td>
+                </form>
+            </tr>
+        </table>
+
+    </div>
+    <br>
+    <p id="total">TOTAL:</p>
+    <br>
+
+    <hr>
+    <br>
+
+    <div>
+        <input type="button" id="calcTotal" onclick="calcTotal()" value="Calcular Total">
+        <input type="button" id="limpar" onclick="limpar()" value="Limpar Comanda">
+    </div>
+
+</body>
+
+</html>
